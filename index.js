@@ -25,6 +25,15 @@ app.get('/proxy/:url', async (req, res) => {
         res.status(500).json({ error: error.message});
     }
 });
+// Обработка корневого URL
+app.get('/', (req, res) => {
+    res.send('Привет, это ваш сервер!');
+});
+
+// Обработка другого URL, например, /someRoute
+app.get('/someRoute', (req, res) => {
+    res.send('Вы находитесь на странице /someRoute');
+});
 
 app.listen(PORT, () => {
     console.log(`CORS proxy is running on port ${PORT}`);
