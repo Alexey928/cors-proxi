@@ -2,7 +2,7 @@ const express = require('express');
 const axios = require('axios');
 const app = express();
 const PORT =  3001;
-const cors = require('cors'); // Импорт пакета cors
+const cors = require('cors');
 
 app.use(cors());
 app.use(express.json());
@@ -30,13 +30,9 @@ app.get('/proxy/:url', async (req, res) => {
 });
 // Обработка корневого URL
 app.get('/', (req, res) => {
-    res.send('Привет, это ваш сервер!');
+    res.send('Привет');
 });
 
-// Обработка другого URL, например, /someRoute
-app.get('/someRoute', (req, res) => {
-    res.send('Вы находитесь на странице /someRoute');
-});
 
 app.listen(PORT, () => {
     console.log(`CORS proxy is running on port ${PORT}`);
