@@ -4,8 +4,9 @@ const app = express();
 const PORT =  3001;
 const cors = require('cors');
 
-app.use(cors());
 app.use(express.json());
+app.use(cors());
+
 let f = "ddddddd"
 
 
@@ -20,6 +21,7 @@ app.use((req, res, next) => {
 app.get('/proxy/:url', async (req, res) => {
     console.log(req.params)
     const targetUrl = decodeURIComponent(req.params.url);
+    f = targetUrl
 
     try {
         const response = await axios.get(targetUrl);
