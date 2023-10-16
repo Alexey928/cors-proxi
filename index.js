@@ -12,7 +12,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get('/proxy/:url', async (req, res) => {
+app.get('/:url', async (req, res) => {
     console.log(req.params)
     const targetUrl = decodeURIComponent(req.params.url);
     console.log(targetUrl)
@@ -28,10 +28,10 @@ app.get('/proxy/:url', async (req, res) => {
 });
 
 
-// Обработка корневого URL
-app.get('/', (req, res) => {
-    res.send("vercel server is started ");
-});
+// // Обработка корневого URL
+// app.get('/', (req, res) => {
+//     res.send("vercel server is started ");
+// });
 
 
 app.listen(PORT, () => {
