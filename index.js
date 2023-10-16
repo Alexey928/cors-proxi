@@ -15,6 +15,7 @@ app.use((req, res, next) => {
 app.get('/proxy/:url', async (req, res) => {
     console.log(req.params)
     const targetUrl = decodeURIComponent(req.params.url);
+    console.log(targetUrl)
 
     try {
         const response = await axios.get(targetUrl);
