@@ -6,9 +6,11 @@ const cors = require('cors');
 
 app.use(cors());
 app.use(express.json());
+let f = "ddddddd"
 
 
 app.use((req, res, next) => {
+    f="ggggggggg"
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
@@ -30,7 +32,7 @@ app.get('/proxy/:url', async (req, res) => {
 });
 // Обработка корневого URL
 app.get('/', (req, res) => {
-    res.send('Привет');
+    res.send(f);
 });
 
 
