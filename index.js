@@ -29,7 +29,7 @@ app.get('/proxy/:url', async (req, res) => {
 
 // Обработка корневого URL
 app.get('/', (req, res) => {
-    res.send(f);
+    res.send("ggggggggggggggggggggggggggggggg");
 });
 
 
