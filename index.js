@@ -1,7 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const app = express();
-const PORT =  3001;
+const PORT =  5000;
 
 app.use(express.json());
 
@@ -16,6 +16,7 @@ app.get('/:url', async (req, res) => {
     console.log(req.params)
     const targetUrl = decodeURIComponent(req.params.url);
     console.log(targetUrl)
+    console.log("ww")
 
     try {
         const response = await axios.get(targetUrl);
