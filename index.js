@@ -24,12 +24,12 @@ app.get('/:url', async (req, res) => {
 
     } catch (error) {
         console.log(error.message)
-        res.status(500).json({ error: error.message});
+        res.status(505).json({ error: error.message});
     }
 });
 
 
-// // Обработка корневого URL
+//  Обработка корневого URL
 // app.get('/', (req, res) => {
 //     res.send("vercel server is started ");
 // });
