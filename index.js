@@ -24,7 +24,7 @@ app.get('/:url', async (req, res) => {
 
     } catch (error) {
         console.log(error.message)
-        res.status(505).json({ error: error.message&&"target server is not curectly"});
+        res.status(505).json({ error: error.message && targetUrl && "target server is not curectly"});
     }
 });
 
