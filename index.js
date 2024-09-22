@@ -24,7 +24,7 @@ app.get('/:url', async (req, res) => {
 
     } catch (error) {
         console.log(error.message);
-        console.log(is erro from cath);
+        console.log('is erro from cath');
         res.status(500).json({ error: error.message});
     }
 });
